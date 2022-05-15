@@ -1,0 +1,15 @@
+plaintext = input('Pleaseenter a message to either encrypt or decrypt: ').upper()
+
+ciphertext = ''
+for letter in plaintext:
+  ascii = ord(letter)
+  if ascii >= 65 and ascii <= 90:
+    position = ascii -65
+    newPosition = 25 - position
+    newAscii = newPosition + 65
+    newLetter = chr(newAscii)
+  else:
+    newLetter = letter
+  ciphertext = ciphertext + newLetter
+
+print(ciphertext)
